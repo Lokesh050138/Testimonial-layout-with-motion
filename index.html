@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonial layout</title>
+
+    <!-- font-awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .testimonial {
+            text-align: center;
+            max-width: 800px;
+            padding: 20px;
+            background: black;
+            border-radius: 10px;
+            position: relative;
+            animation: moveRightToLeft 20s linear infinite;
+        }
+
+        @keyframes moveRightToLeft {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-150%);
+            }
+        }
+
+        .testimonial i.fa-quote-left {
+            font-size: 50px;
+            display: flex;
+            position: relative;
+            z-index: 1;
+            top: 15px;
+            color: linear-gradient(to top, black, White);
+        }
+
+        .testimonial i.fa-quote-right {
+            font-size: 50px;
+            display: flex;
+            position: relative;
+            z-index: 1;
+            top: 15px;
+            float: right;
+            right: 80px;
+        }
+
+        .testimonial p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            line-height: 2rem;
+            color: rgba(128, 128, 128, 0.473);
+        }
+
+        .testimonial p strong {
+            color: #ccc;
+        }
+
+        .testimonial .author {
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .testimonial .author img {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            outline: white 2px solid;
+            margin: 10px 10px 0 0;
+            transition: transform 6s ease-in-out;
+            animation: zoomInOut 6s ease-in-out infinite;
+        }
+
+        .name {
+            font-weight: bold;
+            color: rgba(128, 128, 128, 0.473);
+            margin: 5px 5px 5px 0;
+        }
+
+        .company {
+            color: #8a2be2;
+        }
+
+        @keyframes zoomInOut {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="testimonial">
+        <p><i class="fa-solid fa-quote-left"></i>Discovering Product Video Examples was a <strong>game-changer</strong> for our product launch! The platform
+            saved us <strong>countless hours</strong> searching for inspiring videos. With their incredible library, we
+            found the perfect inspiration for our Product Hunt launch in no time. Product Video Examples is truly the
+            <strong>ultimate site</strong> for creative SaaS video inspiration!<i class="fa-solid fa-quote-right"></i></p>
+        <div class="author">
+            <img src="./01(2).jpg" alt="Erwin">
+        </div>
+        <div>
+            <div class="name">Erwin, CEO of </div>
+            <div class="company">Tailscan</div>
+        </div>
+    </div>
+</body>
+
+</html>
